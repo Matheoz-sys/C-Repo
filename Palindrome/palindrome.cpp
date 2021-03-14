@@ -13,8 +13,7 @@ int main(void)
     char word[t];
     t--;
     strcpy(word, z.c_str());
-    for (int i = 0; i <=t; i++)
-    {
+    for (int i = 0; i <=t; i++){
         if (word[i] == word[t-i])
         {
             check++;
