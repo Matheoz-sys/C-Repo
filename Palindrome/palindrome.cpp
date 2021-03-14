@@ -5,30 +5,24 @@ using namespace std;
 
 int main(void)
 {
-    int check = 1;
+    int check = 0;
     string z;
     cout << "Give a word:";
     cin >> z;
     int t = z.length();
-    char first[t], second[t];
+    char word[t];
     t--;
-    strcpy(first, z.c_str());
+    strcpy(word, z.c_str());
     for (int i = 0; i <=t; i++)
     {
-        second[i] = first[t-i];
-    }
-    for (int i = 0; i <=t; i++)
-    {
-        if (second[i] == first[i])
+        if (word[i] == word[t-i])
         {
             check++;
         }
     }
-    if (check == t)
-    {
+    if (check == t+1){
         cout << "Word is a palindrome";
-    }else
-    {
+    }else{
         cout << "Word isn't a palindrome";
     }
 }
